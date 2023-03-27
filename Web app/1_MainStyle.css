@@ -1,0 +1,150 @@
+/*Styling the header*/
+.header{
+	max-height: 80%;
+	max-width: 20%;
+	font-family: Trebuchet MS;
+	border-radius: 10px;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	background: linear-gradient(to left,white,#F0E68C);
+	float: left;
+    
+}
+/*Styling the middle section of the page*/
+.middle{
+	padding-right: 30px;
+	height: 660px;
+	max-width: 80%;
+	float: right;
+	background: linear-gradient(to right,white,#F0E68C);
+    border-radius: 10px;
+    font-family: Trebuchet MS;
+}
+/*Styling the footer*/
+.footer{
+	padding-top: 20px;
+	padding-bottom: 20px; 
+	font-size: 20px;
+	font-family: Trebuchet MS;
+	border-radius: 10px;
+	max-width: 100%;
+	padding-left: 20px;
+	background: linear-gradient(to left,white,#F0E68C);
+	clear: both;
+}
+
+ul{
+	list-style-type: none;
+}
+/*For zooming the images when mouse pointer is hovered over them*/
+.zoom {
+  padding: 0px;
+  background-color: white;
+  transition: transform .2s; /* Animation */
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
+}
+
+.slidercontainer {  
+            margin: 0;  
+            background: #e6e6e6;
+
+}  
+.showSlide {  
+    display: none  
+}  
+.showSlide img {  
+    width: 100%;  
+}  
+.slidercontainer {  
+    width: 1200px;  
+    position: relative;  
+    margin: auto;  
+}  
+.left, .right {  
+    cursor: pointer;  
+    position: absolute;  
+    top: 50%;  
+    width: auto;  
+    padding: 16px;  
+    margin-top: -22px;  
+    color: white;  
+    font-weight: bold;  
+    font-size: 18px;  
+    transition: 0.6s ease;  
+    border-radius: 0 3px 3px 0;  
+}  
+.right {  
+    right: 0;  
+    border-radius: 3px 0 0 3px;  
+}  
+    .left:hover, .right:hover {  
+    background-color: rgba(115, 115, 115, 0.8);  
+}  
+.content {  
+    color: #eff5d4;  
+    font-size: 30px;  
+    padding: 8px 12px;  
+    position: absolute;  
+    top: 10px;  
+    width: 100%;  
+    text-align: center;  
+}  
+.active {  
+    background-color: #717171;  
+}  
+/* Fading animation */  
+.fade {  
+    -webkit-animation-name: fade;  
+     -webkit-animation-duration: 1.5s;  
+     animation-name: fade;  
+    animation-duration: 1.5s;  
+}  
+ @-webkit-keyframes fade {  
+    from {  
+        opacity: .4  
+    }  
+        to {  
+        opacity: 1  
+    }  
+}  
+  
+        @keyframes fade {  
+            from {  
+                opacity: .4  
+            }  
+            to {  
+                opacity: 1  
+            }  
+        } 
+
+.numbertext {
+  color: #2e0303;
+  font-size: 16px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+
+.icons{
+     padding: 0px;
+     background-color: white;
+     transition: transform .2s; /* Animation */
+     margin: 0 auto;
+     border-radius: 50%;
+}
+
+.icons:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
+

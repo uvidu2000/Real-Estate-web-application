@@ -1,0 +1,163 @@
+/*Common style sheet for all property pages*/
+.header{
+	height: 1100px;
+	max-width: 20%;
+	border-radius: 10px;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	background: linear-gradient(to left,white,#F0E68C);
+	float: left;
+  font-family: Trebuchet MS;    
+}
+
+ul{
+	list-style-type: none;
+}
+
+/*styling the section holding the property information*/
+.property{
+	margin-left: 10%;
+	height: 1100px;
+	width: 60%;
+	float: left;
+	border-style: outset;
+	border-color: gold;
+  border-radius: 10px;
+  font-family: Trebuchet MS;
+}
+
+.icons{
+     padding: 0px;
+     background-color: white;
+     transition: transform .2s; /* Animation */
+     margin: 0 auto;
+     border-radius: 50%;
+}
+
+.icons:hover {
+  transform: scale(1.5); /* (150% zoom */
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+  width: 60%;
+  margin-left: 5%;
+  float: left;
+ 
+
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #FFA500;
+  padding: 2px 16px;
+  color: red;
+  font-family: Trebuchet MS;
+  font-weight: bold;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.description{
+	float: left;
+	font-family:Trebuchet MS;
+	font-size: 20px;
+	padding-left: 5%;
+}
+
+#tabs{
+	clear: both;
+	width: 800px;
+	margin-left: 40px;
+	margin-top: 500px;
+
+}
+
+.blank{
+	height: 1100px;
+	width: 18.1%;
+	float: right;
+  border-radius: 10px;
+  
+	margin-top: -1100px;
+	margin-right: 0%;
+	font-family:  Trebuchet MS;
+	background: linear-gradient(to right,white,#F0E68C);
+    
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Property 3</title>
+		<meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="jquery.js"></script>
+        <link rel="stylesheet" href="jquery-ui.css">
+        <script src="jquery-ui.js"></script>
+        
+
+	</head>
+
+	</head>
+
+	<body>
+		<header class="header">
+			<ul>
+				<li><img src="home.jpg" class="icons" height="140px" width="140px" style="border-radius:50%;"></li>
+				<li><h3 style="font-size: 200%; padding-left: 15%; color: red; font-family: Trebuchet MS;">Home</h3></li>
+			  <li><a href="2_Form.html"><img src="find.jpg" class="icons"  height="140px" width="140px"></a></li>
+			  <li><h3 style="font-size: 200%; padding-left: 15%;  color: red; font-family:Trebuchet MS">Search</h3></li>	
+		</header>
+
+	    <section class="property">
+	    	<h1 align="center">House,Colombo</h1>
+
+        
+	    	<div class="container">
+
+              <!-- Full-width images with number text -->
+              <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <img src="garden3.jpg" height="300px"   style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img src="bedroom3.jpg" height="300px" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img src="bathroom1.jpg" height="300px" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img src="living3.jpg" height="300px" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                 <div class="numbertext">5 / 6</div>
+                 <img src="dining3.jpg" height="300px" style="width:100%">
+              </div>
+
+              <div class="mySlides">
+                 <div class="numbertext">6 / 6</div>
+                 <img src="kitchen1.jpg" height="300px" style="width:100%">
+              </div>
+
+              <!-- Next and previous buttons -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <!-- Image text -->
+              <div class="caption-container">
+                 <p id="caption"></p>
+              </div>
+
+              <!-- Thumbnail images -->
+              <div class="row">
+                  <div class="column">
+                     <img class="demo cursor" src="garden3.jpg" height="50px" style="width:100%" onclick="currentSlide(1)" alt="Garden">
+                  </div>
+                  <div class="column">
+                     <img class="demo cursor" src="bedroom3.jpg" height="50px" style="width:100%" onclick="currentSlide(2)" alt="Bedroom">
+                  </div>
+                  <div class="column">
+                     <img class="demo cursor" src="bathroom1.jpg" height="50px" style="width:100%" onclick="currentSlide(3)" alt="Bathroom">
+                  </div>
+                  <div class="column">
+                      <img class="demo cursor" src="living3.jpg" height="50px" style="width:100%" onclick="currentSlide(4)" alt="Living Room">
+                  </div>
+                  <div class="column">
+                      <img class="demo cursor" src="dining3.jpg" height="50px" style="width:100%" onclick="currentSlide(5)" alt="Dining Room">
+                  </div>
+                  <div class="column">
+                      <img class="demo cursor" src="kitchen1.jpg" height="50px" style="width:100%" onclick="currentSlide(6)" alt="Kitchen">
+                  </div>
+                </div>
+            </div>
+
+            <section class="description">
+            	<p>Property Type : House</p>
+            	<br>
+            	<p>Location : Colombo 3</p>
+            	<br>
+            	<p>Price : 2500k $</p> 	
+            </section>
+
+            
+            <div id="tabs">
+             <ul>
+              <li><a href="#fragment-1"><span>Description</span></a></li>
+              <li><a href="#fragment-2"><span>Floor Plan</span></a></li>
+              <li><a href="#fragment-3"><span>Google map</span></a></li>
+             </ul>
+            <div id="fragment-1">
+              <p>Stunning large late 80’s contemporary home with soaring ceilings and windows, split levels, great floor plan including open dining and living room. Located in the beautiful hilly and treed, desirable Windmill Hill section of Desoto you are conveniently located to shops, dining, and 20 minutes to downtown Dallas. This 3 bedroom, 3.1 bath home is large and accommodating to both guests for entertaining with 2 living areas, office, wet bar, with a Master suite located on the 1st floor. Great structure and bones and are waiting for new owners to bring their decorating ideas.</p>
+            </div>
+            <div id="fragment-2">
+              <img src="property3.jpg" height="300px" width="600px" style="margin-left: 60px;">
+            </div>
+            <div id="fragment-3">
+              <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63320.43041606117!2d80.5907617848666!3d7.294541256441263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae366480b21bd81%3A0xc2dd88c69272dcd2!2sKandy%20Casa%20by%20Regus!5e0!3m2!1sen!2slk!4v1673548432029!5m2!1sen!2slk" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+            </div>
+            </div>
+
+            <p id="prop3">
+               <button type="button" id="add-to-favourites">Add to favourites</button>
+               <button type="button" id="remove-from-favourites">Remove from favourites</button>
+            </p>
+	    	
+	    </section>
+      <section class="blank"></section>
+
+      <script src="Property.js"></script>
+      <script src="2_Form.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Search page</title>
+		<meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="2_Form.css">
+      <script src="jquery.js"></script>
+      <link rel="stylesheet" href="jquery-ui.css">
+      <script src="jquery-ui.js"></script>
+	</head>
+
+	<body>
+      <!--Section holding the vertical nav bar-->
+		<header class="header">
+			<ul>
+			  <li><a href="1_Main.html"><img src="home.jpg" class="icons" height="140px" width="140px" style="border-radius:50%;"></a></li>
+			  <li><h3 style="font-size: 200%; padding-left: 15%; color: red;">Home</h3></li>
+			  <li><img src="find.jpg" class="icons"  height="140px" width="140px"></li>
+			  <li><h3 style="font-size: 200%; padding-left: 15%;  color: red;">Search</h3></li>	
+		</header>
+
+      <!--Section holding the search form-->
+		<section class="form" style = "overflow: auto;">
+              <h1 align="center" style="font-family: Trebuchet MS;">PROPERTY TO RENT</h1>
+              <h2 align="center" style="font-family: Trebuchet MS;"><i>Search for your happy place</i></h2>
+
+            <br><br>
+            <!--code for the search form-->
+		      <form>
+                <section>
+                   <label for="type">Property Type:</label>
+                   <select name="propertyType" id="propertyType" >
+                      <option class="any" value="Anytype" selected>Anytype</option>
+                      <option value="House">House</option>
+                      <option value="Flat">Flat/Apartment</option>
+                   </select>
+                </section>
+
+                <br>
+
+               <section>
+                   <label for="dates">Added to the site:</label>
+                   <br>
+                   <label>From: <input type = "text" id = "datepicker-8"></label>
+                   
+                   <label>To: <input type = "text" id = "datepicker-9"></label>
+                </section>
+
+                <br><br>
+
+                <section>
+                   <label for="areas">Location:</label>
+                   <select name="areasLocation" id="areasLocation">
+                      <option value="Anylocation" id="Anylocation" selected>Any Location</option>
+                      <option value="Colombo1" id="Colombo1">Colombo1</option>
+                      <option value="Colombo2" id="Colombo2">Colombo2</option>
+                      <option value="Colombo3" id="Colombo3">Colombo3</option>
+                      <option value="Colombo4" id="Colombo4">Colombo4</option>
+                      <option value="Colombo5" id="Colombo5">Colombo5</option>
+                      <option value="Colombo6" id="Colombo6">Colombo6</option>
+                      <option value="Colombo7" id="Colombo7">Colombo7</option>
+                   </select>
+                </section>
+
+                <br>
+                
+                <section>
+                   <p>
+                   <label for="amount">Price range:</label>
+                   <input type="text" id="amount" readonly class="goldSliderText">
+                   </p>
+                   <div id="slider-range"></div>
+                </section>   
+
+                <br><br>
+          
+                <section>
+                   <label for="bedrooms">Bedrooms:</label>
+                   <input id="bedrooms">
+                </section>
+                
+                <br><br>
+                <!--Adding the buttons-->
+                <button id="search" type="button">Submit</button>
+                <button id="reset">Reset</button>
+
+                <button id ="favourites" class="view-favourites-btn" type="button">View favourites</button>
+                <button id="clearFavourites" class="clear-favourites-btn">Clear favourites</button>
+                
+              </form>
+	   </section>
+
+      <!--Section holding the search results list-->
+      <section id="search-results-holder"></section>
+
+      <!--Section holding the favourites list-->
+      <section id="favourites-holder">
+         <h2 align="center" style="color: red;">View Favourites</h2>
+      </section>
+
+      <script src="2_Form.js"></script>  <!--Javascript file connected to the form page-->
+
+      <!--JSON data-->
+      <script>
+         var data = {
+         "properties": [
+                       {
+                         "id":"prop1",
+                         "type":"House",
+                         "bedrooms":3,
+                         "price":4500,
+                         "tenure":"Freehold",
+                         "description":"Boasting an array of sleek finishes and a thoughtful open plan layout, this immaculate 1-bedroom, 1-bathroom condo is a paradigm of contemporary Brooklyn living. Features of this 531 sq. ft. home include wide plank engineered hardwood floors, huge Pella windows with western exposure, central heating and cooling, and a convenient washer/dryer hook-up. Beyond a functional entryway space the home flows into a luminous, open- concept living, dining, and kitchen area. The galley-style kitchen is equipped with white quartz countertops, a white tile backsplash, Nolte cabinets, and a suite of high-end stainless steel appliances from Samsung and Fisher & Paykel. The bedroom sits just off the living area and has a large reach-in closet. The bathroom has ceramic tile flooring, textured walls, and chic Kohler and Delta fixtures",
+                         "location":"Colombo1",
+                         "picture":"garden1.jpg",
+                         "url":"3_Property1.html",
+                         "added": {
+                         "month":"October",
+                         "day":12,
+                         "year":2022
+                        } 
+                       },
+                       {
+                         "id":"prop2",
+                         "type":"House",
+                         "bedrooms":4,
+                         "price":3500,
+                         "tenure":"Freehold",
+                         "description":"This 3 Bedroom W/ 2 Full Bathroom Ranch Home Is Immaculate & Full Of Upgrades! Enjoy The Open Floor Plan W/ Vaulted 15ft Ceilings & Large Windows Throughout. The Beautiful Kitchen Is The Heart Of The Home Complete With Large Customized Granite Island & Stainless Steel Appliances. Updated Lighting Throughout The Entire Home. Fully Updated Guest Bathroom And Laundry Room. This Floorplan Includes 2′ Extension On Every Side Increasing The Square Footage, Large Extended Patio For Entertaining Right Off The Dining Area. The Large Master Bedroom W/ Large Garden Tub, Double Sinks & Huge Walk-In Closet. Enjoy The Fully Fenced Backyard Perfect For Kids & Pets. The 2.5 Car Extended Garage Allows Room For Extra Storage Or Work Area.",
+                         "location":"Colombo2",
+                         "picture":"garden2.jpg",
+                         "url":"3_Property2.html",
+                         "added": {
+                         "month":"September",
+                         "day":14,
+                         "year":2022
+                         }
+                       },
+                       {
+                        "id":"prop3",
+                        "type":"House",
+                        "bedrooms":2,
+                        "price":2500,
+                        "tenure":"Freehold",
+                        "description":"Stunning large late 80s contemporary home with soaring ceilings and windows, split levels, great floor plan including open dining and living room. Located in the beautiful hilly and treed, desirable Windmill Hill section of Desoto you are conveniently located to shops, dining, and 20 minutes to downtown Dallas. This 3 bedroom, 3.1 bath home is large and accommodating to both guests for entertaining with 2 living areas, office, wet bar, with a Master suite located on the 1st floor. Great structure and bones and are waiting for new owners to bring their decorating ideas.",
+                        "location":"Colombo3",
+                        "picture":"garden3.jpg",
+                        "url":"3_Property3.html",
+                        "added": {
+                        "month":"December",
+                        "day":14,
+                        "year":2022
+                         }
+                       },
+                       {
+                        "id":"prop4",
+                        "type":"Flat",
+                        "bedrooms":2,
+                        "price":1500,
+                        "tenure":"Freehold",
+                        "description":"Perfectly set on a tree-shaded lot, this North Waco beauty feels like home the minute you pull up. The living room is warm and inviting, centered by a wood-burning fireplace and built-in shelving. A spacious breakfast area looks out to the backyard and flows into the kitchen, where you’ll find a breakfast bar, double oven and built-in cook top. The master bedroom is large with no lack of storage, including a separate walk-in closet and additional dual closets. Updated vanity with granite counters, and a beautiful tile and glass shower remodel make this entire room an owner’s retreat! You’ll enjoy the back patio both morning and night, so bring your coffee and wine, and make this house your home.",
+                        "location":"Colombo4",
+                        "picture":"garden4.jpg",
+                        "url":"3_Property4.html",
+                        "added": {
+                        "month":"May",
+                        "day":10,
+                        "year":2021
+                         }
+                       },
+                       {
+                        "id":"prop5",
+                        "type":"Flat",
+                        "bedrooms":5,
+                        "price":3000,
+                        "tenure":"Freehold",
+                        "description":"Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. <br>The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine. This large open plan benefits from bi folding doors onto a secluded private courtyard garden. Both bedrooms are double sized, and the family bathroom boasts a matching three piece suite a shower attachment over the bath. There is also a separate wet room. There are walnut doors throughout and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms.<br>This apartment being only five years old, is still under a 10 year building guarantee",
+                        "location":"Colombo5",
+                        "picture":"garden5.jpg",
+                        "url":"3_Property5.html",
+                        "added": {
+                        "month":"September",
+                        "day":14,
+                        "year":2022
+                         }
+                       },
+                       {
+                        "id":"prop6",
+                        "type":"Flat",
+                        "bedrooms":3,
+                        "price":2500,
+                        "tenure":"Freehold",
+                        "description":"Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. <br>The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine. This large open plan benefits from bi folding doors onto a secluded private courtyard garden. Both bedrooms are double sized, and the family bathroom boasts a matching three piece suite a shower attachment over the bath. There is also a separate wet room. There are walnut doors throughout and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms.<br>This apartment being only five years old, is still under a 10 year building guarantee",
+                        "location":"Colombo5",
+                        "picture":"garden6.jpg",
+                        "url":"3_Property6.html",
+                        "added": {
+                        "month":"October",
+                        "day":14,
+                        "year":2022
+                         }
+                       },
+                       {
+                        "id":"prop7",
+                        "type":"Flat",
+                        "bedrooms":1,
+                        "price":1000,
+                        "tenure":"Freehold",
+                        "description":"Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. <br>The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine. This large open plan benefits from bi folding doors onto a secluded private courtyard garden. Both bedrooms are double sized, and the family bathroom boasts a matching three piece suite a shower attachment over the bath. There is also a separate wet room. There are walnut doors throughout and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms.<br>This apartment being only five years old, is still under a 10 year building guarantee",
+                        "location":"Colombo2",
+                        "picture":"garden7.jpg",
+                        "url":"3_Property7.html",
+                        "added": {
+                        "month":"September",
+                        "day":14,
+                        "year":2020
+                         }
+                       }
+                   ]
+                }
+      </script>      
+	</body>
+</html>
